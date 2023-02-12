@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: web-visit-counter
-          image: gradlecanvacr.azurecr.io/redis-web-counter:144ed38
+          image: gradlecanvacr.azurecr.io/redis-web-counter:28e2677
           imagePullPolicy: Never
           ports:
             - protocol: TCP
