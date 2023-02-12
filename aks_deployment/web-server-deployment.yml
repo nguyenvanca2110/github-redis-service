@@ -9,9 +9,8 @@ spec:
   selector:
     app: web-visit-counter
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8080
+  - port: 80
+    targetPort: 8080
 
 ---
 apiVersion: apps/v1
@@ -32,10 +31,9 @@ spec:
         app: web-visit-counter
     spec:
       containers:
-        - name: web-visit-counter
-          image: gradlecanvacr.azurecr.io/redis-web-counter:9e0dd14
-          imagePullPolicy: Never
-          ports:
-            - protocol: TCP
-              containerPort: 8080
+      - name: web-visit-counter
+        image: gradlecanvacr.azurecr.io/redis-web-counter:7a2e509
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 8080
 
