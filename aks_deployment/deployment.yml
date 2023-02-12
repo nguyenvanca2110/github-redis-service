@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: reddis-db
+  namespace: redis-namespace
   labels:
     app: reddis-db
 spec:
@@ -26,21 +27,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: visit-counter
+  name: web-visit-counter
+  namespace: redis-namespace
   labels:
-    app: visit-counter
+    app: web-visit-counter
 spec:
   selector:
     matchLabels:
-      app: visit-counter
+      app: web-visit-counter
   replicas: 1
   template:
     metadata:
       labels:
-        app: visit-counter
+        app: web-visit-counter
     spec:
       containers:
-        - name: visit-counter
+        - name: web-visit-counter
           image: github-redis-service:v0.5
           imagePullPolicy: Never
           ports:
