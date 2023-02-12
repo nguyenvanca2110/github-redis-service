@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
         - name: visit-counter
-          image: redis-counter-service:v0.5
+          image: github-redis-service:v0.5
           imagePullPolicy: Never
           ports:
           - protocol: TCP

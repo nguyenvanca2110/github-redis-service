@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.shethap.tech</groupId>
-    <artifactId>redis-counter-service</artifactId>
+    <artifactId>github-redis-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>redis-counter-service</name>
+    <name>github-redis-service</name>
     <description>Project to have redis connectivity.</description>
     <properties>
         <java.version>8</java.version>
