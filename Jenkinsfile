@@ -4,6 +4,7 @@ pipeline{
 
 	tools {
 	    gradle 'Gradle_8.0'
+	    maven 'Maven_3.9.0'
 	    jdk 'JDK17'
 	}
 
