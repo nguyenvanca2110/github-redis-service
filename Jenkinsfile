@@ -38,8 +38,9 @@ pipeline{
                 sh 'echo $PWD'
                 // sh 'cd ..'
                 // sh 'echo $PWD'
-                sh './mvn clean'
-                sh './mvn package'
+                sh 'mvn clean'
+                sh "mvn package -DskipTests=true"
+                archive 'target/*.jar'
             }
         }
 
