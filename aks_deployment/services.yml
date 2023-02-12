@@ -17,7 +17,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: reddis-db-svc
-  namespace: redis-namespaces
+  namespace: redis-namespace
 spec:
   type: LoadBalancer
   selector:

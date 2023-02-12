@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: reddis-db
-          image: redis
+          image: redis:latest
           imagePullPolicy: Never
           ports:
           - protocol: TCP
@@ -43,7 +43,7 @@ spec:
     spec:
       containers:
         - name: web-visit-counter
-          image: github-redis-service:v0.5
+          image: gradlecanvacr.azurecr.io/redis-web-counter:144ed38
           imagePullPolicy: Never
           ports:
           - protocol: TCP
