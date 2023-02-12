@@ -22,14 +22,24 @@ pipeline{
 
 	stages {
 
+//         stage('Gradle build image') {
+//         	steps {
+//         	    sh 'echo $PWD'
+//         		// sh 'cd ..'
+//         		// sh 'echo $PWD'
+//         		sh './gradlew clean'
+//         		sh './gradlew build'
+//         	}
+//         }
+
         stage('Gradle build image') {
-        	steps {
-        	    sh 'echo $PWD'
-        		// sh 'cd ..'
-        		// sh 'echo $PWD'
-        		sh './gradlew clean'
-        		sh './gradlew build'
-        	}
+            steps {
+                sh 'echo $PWD'
+                // sh 'cd ..'
+                // sh 'echo $PWD'
+                sh './mvn clean'
+                sh './mvn package'
+            }
         }
 
         stage('Docker build image') {
