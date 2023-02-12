@@ -5,4 +5,4 @@ RUN mkdir /app
 COPY target/${ARTIFACT_NAME} /app/
 EXPOSE 8080
 # CMD java -jar /app/${ARTIFACT_NAME}
-ENTRYPOINT [ "java", "-jar", "/grade-demo.jar" ]
+ENTRYPOINT [ "java", "-jar", "/app/${ARTIFACT_NAME}" ]
