@@ -1,11 +1,15 @@
+
 FROM openjdk:17-alpine
 
-MAINTAINER CaNV
+# Refer to Maven build -> finalName
+ARG JAR_FILE=target/github-redis-service-0.0.1-SNAPSHOT.jar
 
-COPY target/github-redis-service-0.0.1-SNAPSHOT.jar redis-web-app.jar
+# cd /opt/app
+WORKDIR /opt/app
+
+# cp target/spring-boot-web.jar /opt/app/app.jar
+COPY ${JAR_FILE} redis-web-app.jar
 
 EXPOSE 8080
-# With profile configuration
-ENTRYPOINT [ "java", "-jar", "/redis-web-app.jar" ]
-# Without profile configuration
-#ENTRYPOINT [ "java", "-jar", "/grade-demo.jar" ]
+# java -jar /opt/app/app.jar
+ENTRYPOINT ["java","-jar", "redis-web-app.jar"]

@@ -25,7 +25,7 @@ spec:
   selector:
     matchLabels:
       app: web-visit-counter
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
