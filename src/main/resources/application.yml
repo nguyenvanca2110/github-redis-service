@@ -1,4 +1,4 @@
-service:
+services:
 #  host: 127.0.0.1
   redis:
     baseurl: redis:6379

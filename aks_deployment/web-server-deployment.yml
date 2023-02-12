@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: web-visit-counter
-        image: gradlecanvacr.azurecr.io/redis-web-counter:11cb843
+        image: gradlecanvacr.azurecr.io/redis-web-counter:1b71f9d
         imagePullPolicy: "Always"
         ports:
         - containerPort: 8080
